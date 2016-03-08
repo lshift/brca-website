@@ -171,10 +171,15 @@ var DataTable = React.createClass({
             page, totalPages, count, error} = this.state;
         var {columns, filterColumns, className, advancedFilters, onToggleMode} = this.props;
         var renderColumns = _.filter(columns, c => columnSelection[c.prop]);
-        var filterFormEls = _.map(filterColumns, ({name, prop, values}) =>
-            <SelectField onChange={v => this.setFilters({[prop]: filterAny(v)})}
-                         key={prop} label={`${name} is: `} value={filterDisplay(filterValues[prop])}
-                         options={addAny(values)}/>);
+        var filterFormEls = <p>
+            { _.map(filterColumns, ({name, prop, values}) => {
+                    return <SelectField onChange={v => this.setFilters({[prop]: filterAny(v)})}
+                                        key={prop} label={`${name} is: \u00a0`}
+                                        value={filterDisplay(filterValues[prop])}
+                                        options={addAny(values)}/>
+                }
+            )}
+        </p>;
 
         return (error ? <p>{error}</p> :
             <div className={this.props.className}>
@@ -199,7 +204,7 @@ var DataTable = React.createClass({
                                         style={{marginRight: '1em'}}>
                                     {count} matching {pluralize(count, 'variant')}
                                 </label>
-                                <Button download="variants.csv" href={this.createDownload()}>Download</Button>
+                                <Button bsSize='xsmall' download="variants.csv" href={this.createDownload()}>Download</Button>
                             </div>
                         </div>
                     </Col>

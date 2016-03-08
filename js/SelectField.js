@@ -16,7 +16,7 @@ var SelectField = React.createClass({
             opels = _.map(options, v => <option key={v} value={v}>{v}</option>);
 
         return (
-            <Input type="select" value={value} label={label} onChange={this.onChange}>
+            <Input type="select" bsSize='small' value={value} label={label} onChange={this.onChange}>
                 {opels}
             </Input>
         );
