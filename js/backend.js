@@ -29,7 +29,7 @@ function url(opts) {
     var {
         format = 'json',
         filterValues = {},
-        sortBy: {prop = 'Gene_Symbol', order = 'ascending'} = {},
+        sortBy: {prop, order} = {},
         pageLength = 100,
         page = 0,
         search = '',
