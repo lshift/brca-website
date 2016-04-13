@@ -43,9 +43,8 @@ function renderCell(val) {
 }
 
 var filterColumns = [
-    {name: 'Gene', prop: 'Gene_Symbol', values: ['BRCA1', 'BRCA2']},
-//    {name: 'Exon', values: ['Any', 1, 2, 3, 4, 5]}, // XXX needs refgene to get exon count
-    {name: 'Pathogenicity', prop: 'Cat_Dis', values: ['Pathogenic', 'Benign', 'Unknown']}
+{name: 'Locus', prop: 'Locus', values: ['APC','BRCA1','BRCA2','MLH1','MSH2','MSH6','MUTYH','PMS2']},
+{name: 'Pathogenicity', prop: 'Cat_Dis', values: ['Pathogenic', 'Benign', 'Unknown']}
 ];
 
 // XXX duplicate this functionality on the server, perhaps
