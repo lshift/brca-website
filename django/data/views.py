@@ -23,7 +23,7 @@ def index(request):
     filter_values = request.GET.getlist('filterValue')
     column = request.GET.getlist('column')
 
-    query = Variant.objects
+    query = Variant.objects.all()
 
     if format == 'csv':
         quotes = '\''

@@ -184,8 +184,6 @@ var DataTable = React.createClass({
     render: function () {
         var {filterValues, filtersOpen, lollipopOpen, search, data, columnSelection,
             page, totalPages, count, synonyms, error} = this.state;
-        console.log('DATA IS')
-        console.log(data)
         var {columns, filterColumns, className, advancedFilters, downloadButton, lollipopButton, onToggleMode} = this.props;
         var renderColumns = _.filter(columns, c => columnSelection[c.prop]);
         var filterFormEls = _.map(filterColumns, ({name, prop, values}) =>

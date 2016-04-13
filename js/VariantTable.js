@@ -108,16 +108,6 @@ var subColumns = _.map(columns, (c => {c.render = renderCell; return c;}));
 var defaultColumns = ['Locus', 'Transcript', 'Allele', 'DNA', 'AA'];
 var defaultResearchColumns = ['Locus', 'Transcript', 'Allele', 'DNA', 'AA'];
 
-var allSources = {
-    Variant_in_ENIGMA: 1,
-    Variant_in_ClinVar: 1,
-    Variant_in_1000_Genomes: 1,
-    Variant_in_ExAC: 1,
-    Variant_in_LOVD: 1,
-    Variant_in_BIC: 1,
-    Variant_in_ESP: 1,
-    Variant_in_exLOVD: 1
-};
 // Work-around to allow the user to select text in the table. The browser does not distinguish between
 // click and drag: if mouseup and mousedown occur on the same element, a click event is fired even if
 // the events occur at very different locations. That makes it hard to select text. This workaround
@@ -150,7 +140,6 @@ var Table = React.createClass({
                 filterColumns={filterColumns}
                 initialData={data}
                 initialPageLength={20}
-                initialSortBy={{prop: 'Gene_Symbol', order: 'descending'}}
                 pageLengthOptions={[ 20, 50, 100 ]}/>
         );
     }
@@ -167,7 +156,6 @@ var ResearchVariantTableSupplier = function (Component) {
             var columnSelectionQueryParams = this.props.initialState.columnSelection;
 
             return {
-                sourceSelection: {...allSources, ...this.props.sourceSelection},
                 columnSelection: {...defaultColumnSelection, ...columnSelectionQueryParams}
             };
         },
@@ -176,14 +164,6 @@ var ResearchVariantTableSupplier = function (Component) {
                 val = columnSelection[prop],
                 cs = {...columnSelection, [prop]: !val};
             this.setState({columnSelection: cs});
-        },
-        setSource: function (prop, event) {
-            // this function uses 1, 0 and -1 to accommodate excluding sources as well as not-including them
-            // currently only uses 1 and 0 because exclusion is not being used
-            var {sourceSelection} = this.state
-            var value = event.target.checked ? 1 : 0;
-            var ss = {...sourceSelection, [prop]: value};
-            this.setState({sourceSelection: ss});
         },
         filterFormCols: function (subColList, columnSelection) {
             return _.map(subColList, ({title, prop}) =>
@@ -211,14 +191,12 @@ var ResearchVariantTableSupplier = function (Component) {
             return defaultResearchColumns;
         },
         render: function () {
-            var sourceSelection = this.state.sourceSelection;
             var columnSelection = this.state.columnSelection;
             return (
                 <Component
                     {...this.props}
                     columns={this.getColumns()}
                     advancedFilters={this.getAdvancedFilters()}
-                    sourceSelection={sourceSelection}
                     columnSelection={columnSelection}
                     downloadButton={this.getDownloadButton}
                     lollipopButton={()=> null}/>
@@ -241,13 +219,11 @@ var VariantTableSupplier = function (Component) {
             var columnSelection = _.object(
                 _.map(this.getColumns(),
                     c => _.contains(this.getDefaultColumns(), c.prop) ? [c.prop, true] : [c.prop, false]));
-            var sourceSelection = allSources
             return (
                 <Component
                     {...this.props}
                     columns={this.getColumns()}
                     columnSelection={columnSelection}
-                    sourceSelection={sourceSelection}
                     downloadButton={()=> null}
                     lollipopButton={()=> null}/>
             );
