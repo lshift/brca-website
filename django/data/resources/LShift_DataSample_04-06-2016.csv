@@ -1,0 +1,59 @@
+Locus,Transcript,Allele,DNA,AA,Genome_Build,Chromosome,Genome_Build_DNA,Report_As_Allele,Report_As_DNA,Report_As_AA,Region,Cat_Dis,Non_inc_Dis,Rpt,Fam,DNA_Type,AA_Type,Cyto_Type,RS,ClinVar,Source,Alias_es,Ref
+APC,NM_000038.5,,c.426_427delAT,p.Leu143AlafsX4,GRCh37,5,g.112111329_112111330delAT,,,,Ex 05A,Path (Familial Adenomatous Polyposis),Familial Adenomatous Polyposis,0,0,Del,FS,,,"RCV000144571, RCV000131775",BIC,,"CastellsaguÃ© 2010, Friedl 2005, Heppner Goss 2002, Neklason 2008, Spirio 1993, Trufant 2012"
+APC,NM_000038.5,,c.472dupT,p.Tyr158LeufsX10,GRCh37,5,g.112111375_112111376insT,,,,Ex 05A,Path (Familial Adenomatous Polyposis),Familial Adenomatous Polyposis,0,0,Dup,FS,,,,,EXON04,Cowie 2004
+APC,NM_000038.5,,c.637C>T,p.Arg213X,GRCh37,5,g.112116592C>T,,,,Ex 06A,Path (Familial Adenomatous Polyposis),Familial Adenomatous Polyposis,0,0,Sub,Non,,,RCV000129233,,,"Friedl 2005, Giarola 1999, Kanter-Smoler 2008, KohoutovÃ¡ 2002, Miyoshi 1992, Rivera 2011, Stekrova 2007, VandrovcovÃ¡ 2004"
+APC,NM_000038.5,,c.646-1G>C,,GRCh37,5,g.112128142G>C,,,,In 06A,Path (Familial Adenomatous Polyposis),Familial Adenomatous Polyposis,0,0,Sub,,,,,BIC,EXON09,Aceto 2005
+APC,NM_000038.5,,c.6857C>T,p.Ala2286Val,GRCh37,5,g.112178148C>T,,,,Ex 16A,Unk Sig (Familial Adenomatous Polyposis),Familial Adenomatous Polyposis,0,0,Sub,Mis,,,"RCV000122796, RCV000120028, RCV000115116",,,
+BRCA1,NM_007294.3,,c.-19-10T>C,,GRCh37,17,g.41276142A>G,,,,In 01A,Ben,,0,0,Sub,,,,"RCV000123877, RCV000111494",,,Fetzer 1999
+BRCA1,NM_007294.3,,c.21C>T,p.Arg7Arg,GRCh37,17,g.41276093G>A,,,,Ex 02A,Ben,,0,0,Sub,Sil,,rs149402012,,BIC,140C>T,Fackenthal 2012
+BRCA1,NM_007294.3,,c.68_69delAG,p.Glu23ValfsX17,GRCh37,17,g.41276045_41276046delCT,,,,Ex 02A,Path (HBOC),HBOC,0,0,Del,FS,,,"RCV000056295, RCV000019230, RCV000019231, RCV000034761, RCV000131394",BIC,185delAG,
+BRCA1,NM_007294.3,,c.97G>C,p.Glu33Gln,GRCh37,17,g.41267780C>G,,,,Ex 03A,Unk Sig (HBOC),HBOC,0,0,Sub,Mis,,,"RCV000049208, RCV000111754",,,
+BRCA1,NM_007294.3,,c.114G>A,p.Lys38Lys,GRCh37,17,g.41267763C>T,,,,Ex 03A,Ben,,0,0,Sub,Sil,,rs1800062,,BIC,233G>A,"Chen 2003, Elstrodt 2006, Han 2006, Ho 2000, Kim 2006, Lee 2003, Li 1999, McKean-Cowdin 2005, Song 2006"
+BRCA1,NM_007294.3,,c.181T>G,p.Cys61Gly,GRCh37,17,g.41258504A>C,,,,Ex 04A,Path (HBOC),HBOC,0,0,Sub,Mis,,,"RCV000159935, RCV000019229, RCV000047597, RCV000131902",BIC,300T>G,"Au 2005, Akbari 2011, Bergthorsson 2001, Brozek 2011, Brzovic 2003, Bogdanova 2010, Capanu 2011, Elsakov 2010, Friedman 1994, Houvras 2000, Millot 2011, Morris 2004, Morris 2006, Ransburgh 2010, Ruffner 2001, Sweet 2010, Scott 2003, Uglanitsa 2010, Zhang 2011, Caligo 2009, Humphrey 1997, Drost 2011"
+BRCA1,NM_007294.3,,c.182G>A,p.Cys61Tyr,GRCh37,17,g.41258503C>T,,,,Ex 05A,Path (HBOC),HBOC,0,0,Sub,Mis,,,"RCV000047602, RCV000077497",,301G>A,"Abkevich 2004, Bouwman 2013, Li 2010, Towler 2013"
+BRCA1,NM_007294.3,,c.212G>A,p.Arg71Lys,GRCh37,17,g.41258473C>T,,,,Ex 05A,Path (HBOC),HBOC,0,0,Sub,Mis,,,"RCV000047724, RCV000112023",,331G>A,"Caleca 2014, Colombo 2013, Meindl 2002, Zhang 2011"
+BRCA1,NM_007294.3,,c.241C>T,p.Gln81X,GRCh37,17,g.41256945G>A,,,,Ex 06A,Path (HBOC),HBOC,0,0,Sub,Non,,,"RCV000047834, RCV000112105",,,Oros 2004
+BRCA2,NM_000059.3,,c.5753A>G,p.His1918Arg,GRCh37,13,g.32914245A>G,,,,Ex 11,Unk Sig,,0,0,Sub,Mis,,,"RCV000044744, RCV000113478, RCV000129155",,5981A>G,
+BRCA2,NM_000059.3,,c.5768A>C,p.Asp1923Ala,GRCh37,13,g.32914260A>C,,,,Ex 11,Lik Ben,,0,0,Sub,Mis,,,"RCV000044748, RCV000031576, RCV000131532",,5996A>C,"Borg 2010, Tram 2013"
+BRCA2,NM_000059.3,,c.5785A>G,,GRCh37,13,g.32914277A>G,,,,Ex 11,Ben,,0,0,Sub,,,,,BIC,6013A>G,"Borg 2010, Capanu 2011, Caux-Moncoutier 2011, Haffty 2009, Han 2006, Kim 2006, Lindor 2012, Seo 2004, Suter 2004, Thirthagiri 2008"
+BRCA2,NM_000059.3,,c.5813G>C,p.Gly1938Ala,GRCh37,13,g.32914305G>C,,,,Ex 11,Lik Ben,,0,0,Sub,Mis,,,"RCV000076942, RCV000129261",,,
+BRCA2,NM_000059.3,,c.5851_5854delAGTT,p.Ser1951TrpfsX11,GRCh37,13,g.32914343_32914346delAGTT,,,,Ex 11,Path (HBOC),HBOC,0,0,Del,FS,,,"RCV000044773, RCV000031582, RCV000131116",,6079delAGTT,DÃ­ez 2003
+BRCA2,NM_000059.3,,c.5880T>C,p.Cys1960Cys,GRCh37,13,g.32914372T>C,,,,Ex 11,Lik Ben,,0,0,Sub,Sil,,,,,,
+MLH1,NM_000249.3,,c.1559-2A>G,,GRCh37,3,g.37081675A>G,,,,In 13A,Path (Lynch syndrome),Lynch syndrome,0,0,Sub,,,,RCV000075257,,,"Gille 2002, Nakagawa 2002"
+MLH1,NM_000249.3,,c.1732-?_1896+?,p.Glu578_Glu632,GRCh37,3,g.(?_37089010)_(37089174_?),,,,Ex 16A,Path (Lynch syndrome),Lynch syndrome,0,0,WT,WT,,,,,,
+MLH1,NM_000249.3,,c.1732-?_1896+?del,p.?,GRCh37,3,g.(?_37089010)_(37089174_?)del,,,,Ex 16A,Path (Lynch syndrome),Lynch syndrome,0,0,Del,,,,,,,
+MLH1,NM_000249.3,,c.1852_1853delinsGC,p.Lys618Ala,GRCh37,3,g.37089130_37089131delinsGC,,,,Ex 16A,Lik Ben,,0,0,Indel,Mis,,,,,,
+MSH2,NM_000251.2,,c.211G>C,p.Gly71Arg,GRCh37,2,g.47630541G>C,,,,Ex 01A,Lik Path (Lynch syndrome),Lynch syndrome,0,0,Sub,Mis,,,RCV000132075,,,
+MSH2,NM_000251.2,,c.211+9C>G,,GRCh37,2,g.47630550C>G,,,,In 01A,Ben (Lynch syndrome),,0,0,Sub,,,,"RCV000144620, RCV000030249, RCV000035360",,,
+MSH2,NM_000251.2,,c.274C>G,p.Leu92Val,GRCh37,2,g.47635602C>G,,,,Ex 02A,Lik Ben,,0,0,Sub,Mis,,,RCV000076543,,,Betz 2010
+MSH2,NM_000251.2,,c.339G>A,p.Lys113Lys,GRCh37,2,g.47635667G>A,,,,Ex 02A,Lik Ben (Lynch syndrome),,0,0,Sub,Sil,,,"RCV000030252, RCV000078423",,,"Liu 1998, Palicio 2002, Pastrello 2011, Tournier 2008"
+MSH2,NM_000251.2,,c.367-?_1386+?del,p.?,GRCh37,2,g.(?_47637233)_(47672796_?)del,,,,Ex 03A,Path (Lynch syndrome),Lynch syndrome,0,0,Del,Unk,,,,,,"Baudhuin 2005, Boyer 1995, van der Klift 2005, Wagner 2003"
+MSH2,NM_000251.2,,c.387_388delTC,p.Gln130ValfsX2,GRCh37,2,g.47637253_47637254delTC,,,,Ex 03A,Path (Lynch syndrome),Lynch syndrome,0,0,Del,FS,,,RCV000076591,,,
+MSH2,NM_000251.2,,c.475dupA,p.Arg159LysfsX19,GRCh37,2,g.47637341_47637342insA,,,,Ex 03A,Path (Lynch syndrome),Lynch syndrome,0,0,Dup,FS,,,,,,
+MSH2,NM_000251.2,,c.518T>C,p.Leu173Pro,GRCh37,2,g.47637384T>C,,,,Ex 03A,Lik Path (Lynch syndrome),Lynch syndrome,0,0,Sub,Mis,,,RCV000076625,,,"Auclair 2006, Chao 2008, Kansikas 2011, Mangold 2005, Ollila 2006, Ollila 2006, Ollila 2008, Ou 2007"
+MSH2,NM_000251.2,,c.560T>C,p.Leu187Pro,GRCh37,2,g.47637426T>C,,,,Ex 03A,Path (Lynch syndrome),Lynch syndrome,0,0,Sub,Mis,,,RCV000076638,,,"Ollila 2006, Ollila 2008, Martinez 2010, Chao 2008, Kansikas 2011, Peel 2000"
+MSH2,NM_000251.2,,c.571_573delCTC,p.Leu191del,GRCh37,2,g.47637437_47637439delCTC,,,,Ex 03A,Lik Path (Lynch syndrome),Lynch syndrome,0,0,Del,Del,,,"RCV000076643, RCV000160632",,,
+MSH2,NM_001258281.1,,c.595-?_2607+?del,p.?,GRCh37,2,g.(?_47641408)_(47710088_?)del,,,,Ex 06,Path (Lynch syndrome),Lynch syndrome,0,0,Del,Unk,,,,,,
+MSH6,NM_000179.2,,c.668A>G,p.Asn223Ser,GRCh37,2,g.48025790A>G,,,,Ex 04,Lik Ben,,0,0,Sub,Mis,,,RCV000075023,,,
+MSH6,NM_000179.2,,c.762_763delTG,p.Ser256X,GRCh37,2,g.48025884_48025885delTG,,,,Ex 04,Path (Lynch syndrome),Lynch syndrome,0,0,Del,Non,,,RCV000075036,,,
+MSH6,NM_000179.2,,c.979A>G,p.Thr327Ala,GRCh37,2,g.48026101A>G,,,,Ex 04,Unk Sig (Lynch syndrome),Lynch syndrome,0,0,Sub,Mis,,,RCV000160712,,,
+MSH6,NM_000179.2,,c.1407T>A,p.Tyr469X,GRCh37,2,g.48026529T>A,,,,Ex 04,Path (Lynch syndrome),Lynch syndrome,0,0,Sub,Non,,,RCV000129263,,,
+MSH6,NM_000179.2,,c.1474A>G,p.Met492Val,GRCh37,2,g.48026596A>G,,,,Ex 04,Unk Sig,,0,0,Sub,Mis,,,"RCV000074657, RCV000115374",,,"Drost 2012, Nilbert 2009"
+MSH6,NM_000179.2,,c.1875C>T,p.Ser625Ser,GRCh37,2,g.48026997C>T,,,,Ex 04,Ben,,0,0,Sub,Sil,,,"RCV000074695, RCV000162760",,,Vahteristo 2005
+MSH6,NM_000179.2,,c.2062_2063delGT,p.Val688LeufsX9,GRCh37,2,g.48027184_48027185delGT,,,,Ex 04,Path (Lynch syndrome),Lynch syndrome,0,0,Del,FS,,,"RCV000074711, RCV000165752",,,Plaschke 2004
+MSH6,NM_000179.2,,c.2300C>T,p.Thr767Ile,GRCh37,2,g.48027422C>T,,,,Ex 04,Unk Sig,,0,0,Sub,Mis,,,RCV000129397,,,
+MSH6,NM_000179.2,,c.3255C>G,p.Thr1085Thr,GRCh37,2,g.48030641C>G,,,,Ex 05,Lik Ben,,0,0,Sub,Sil,,,RCV000167307,,,
+MSH6,NM_000179.2,,c.3438+11_3438+14delCTTA,,GRCh37,2,g.48030835_48030838delCTTA,,,,In 05,Unk Sig (Lynch syndrome),Lynch syndrome,0,0,Del,,,,"RCV000074851, RCV000160727",,,Chan 1999
+MUTYH,NM_001128425.1,,c.53C>T,p.Pro18Leu,GRCh37,1,g.45800167G>A,,,,Ex 02,Unk Sig,,0,0,Sub,Mis,,,"RCV000123151, RCV000034676, RCV000121605, RCV000129344",,,"Chen 2008, Kim 2007, Yanaru-Fujisawa 2008, Zhang 2006"
+MUTYH,NM_001128425.1,,c.74G>A,p.Gly25Asp,GRCh37,1,g.45800146C>T,,,,Ex 02,Unk Sig,,0,0,Sub,Mis,,,"RCV000123155, RCV000034680, RCV000121606, RCV000129347",,,"Chen 2008, Kim 2007, Yanaru-Fujisawa 2008, Zhang 2006"
+MUTYH,NM_001128425.1,,c.325C>T,p.Arg109Trp,GRCh37,1,g.45799108G>A,,,,Ex 03,Path (MUTYH-associated polyposis),MUTYH-associated polyposis,0,0,Sub,Mis,,,RCV000162761,,,"Nielsen 2009, Nielsen 2009, Shinmura 2014, Vogt 2009"
+MUTYH,NM_001128425.1,,c.1393C>G,p.Pro465Ala,GRCh37,1,g.45796937G>C,,,,Ex 14,Unk Sig,,0,0,Sub,Mis,,,RCV000130637,,"c.1351C>G, p.Pro451Ala",
+PMS2,NM_000535.5,,c.1688G>T,,GRCh37,7,g.6026708C>A,,,,Ex 11,Ben,,0,0,Sub,,,,"RCV000144651, RCV000076820, RCV000034620, RCV000079105, RCV000132121",,,
+PMS2,NM_000535.5,,c.1866G>A,,GRCh37,7,g.6026530C>T,,,,Ex 11,Ben,,0,0,Sub,,,,"RCV000076832, RCV000034623, RCV000121850, RCV000131477",,,
+PMS2,NM_000535.5,,c.2006+6G>A,,GRCh37,7,g.6026384C>T,,,,In 11,Lik Ben,,0,0,Sub,,,,"RCV000076839, RCV000079106, RCV000130905",,,"Hendriks 2006, Sheng 2010"
+PMS2,NM_000535.5,,c.2007-7C>T,,GRCh37,7,g.6022629G>A,,,,In 11,Lik Ben,,0,0,Sub,,,,"RCV000030366, RCV000153747",,,"Hendriks 2006, Sheng 2010, Hansen 2014"
+PMS2,NM_000535.5,,c.2117delA,,GRCh37,7,g.6022512delT,,,,Ex 12,Path (Lynch syndrome),Lynch syndrome,0,0,Del,,,,RCV000132155,,,
+PMS2,NM_000535.5,,c.2186_2187delTC,,GRCh37,7,g.6018315_6018316delGA,,,,Ex 13,Lik Path (Lynch syndrome),Lynch syndrome,0,0,Del,,,,RCV000076845,,,"Leongamornlert 2014, Bakry 2014"
+PMS2,NM_000535.5,,c.2249G>A,,GRCh37,7,g.6018253C>T,,,,Ex 13,Unk Sig (Lynch syndrome),Lynch syndrome,0,0,Sub,,,,"RCV000076849, RCV000115679",,,"Durno 2010, Drost 2013, Senter 2008, Herkert 2011"
+PMS2,NM_000535.5,,c.2253T>C,,GRCh37,7,g.6018249A>G,,,,Ex 13,Ben,,0,0,Sub,,,,"RCV000144648, RCV000030367, RCV000127466, RCV000162407",,,"Thompson 2004, Sheng 2010"
+PMS2,NM_000535.5,,c.2340C>T,,GRCh37,7,g.6017324G>A,,,,Ex 14,Ben,,0,0,Sub,,,,"RCV000076852, RCV000127468, RCV000121852, RCV000162402",,,
