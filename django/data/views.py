@@ -9,68 +9,84 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.gzip import gzip_page
 
 from .models import Variant
+from django.conf import settings
+
+import csv
+import os.path
 
 
 @gzip_page
 def index(request):
-    order_by = request.GET.get('order_by')
-    direction = request.GET.get('direction')
-    page_size = int(request.GET.get('page_size', '0'))
-    page_num = int(request.GET.get('page_num', '0'))
-    search_term = request.GET.get('search_term')
-    format = request.GET.get('format')
-    include = request.GET.getlist('include')
-    exclude = request.GET.getlist('exclude')
-    filters = request.GET.getlist('filter')
-    filter_values = request.GET.getlist('filterValue')
-    column = request.GET.getlist('column')
-
-    query = Variant.objects
-
-    if format == 'csv':
-        quotes = '\''
-    else:
-        quotes = ''
-
-    if include or exclude:
-        query = apply_sources(query, include, exclude)
-
-    if filters:
-        query = apply_filters(query, filter_values, filters, quotes=quotes)
-
-    if search_term:
-        query = apply_search(query, search_term, quotes=quotes)
-
-    if order_by:
-        query = apply_order(query, order_by, direction)
-
-    if format == 'csv':
-
-        cursor = connection.cursor()
-        with tempfile.NamedTemporaryFile() as f:
-            os.chmod(f.name, 0606)
-            cursor.execute("COPY ({}) TO '{}' WITH DELIMITER ',' CSV HEADER".format(query.query, f.name))
-
-            response = HttpResponse(f.read(), content_type='text/csv')
-            response['Content-Disposition'] = 'attachment;filename="variants.csv"'
-            return response
-
-    elif format == 'json':
-
-        count = query.count()
-
-        if search_term:
-            # Number of synonym matches = total matches minus matches on "normal" columns
-            synonyms = count - apply_search(query, search_term, search_column='fts_standard').count()
-        else:
-            synonyms = 0
-
-        query = select_page(query, page_size, page_num)
-
-        # call list() now to evaluate the query
-        response = JsonResponse({'count': count, 'synonyms': synonyms, 'data': list(query.values(*column))})
-        response['Access-Control-Allow-Origin'] = '*'
+    file_path = os.path.join(settings.BASE_DIR, 'data', 'resources', 'cogr.csv')
+    with open(file_path) as csv_file:
+        reader = csv.reader(csv_file)
+        header = reader.next()
+        rows = []
+        for row in reader:
+            row_dict = dict(zip(header, row))
+            rows.append(row_dict)
+        print(rows)
+        response = JsonResponse({'count': len(rows) - 1, 'data': rows})
         return response
+    #
+    # order_by = request.GET.get('order_by')
+    # direction = request.GET.get('direction')
+    # page_size = int(request.GET.get('page_size', '0'))
+    # page_num = int(request.GET.get('page_num', '0'))
+    # search_term = request.GET.get('search_term')
+    # format = request.GET.get('format')
+    # include = request.GET.getlist('include')
+    # exclude = request.GET.getlist('exclude')
+    # filters = request.GET.getlist('filter')
+    # filter_values = request.GET.getlist('filterValue')
+    # column = request.GET.getlist('column')
+    #
+    # query = Variant.objects
+    #
+    # if format == 'csv':
+    #     quotes = '\''
+    # else:
+    #     quotes = ''
+    #
+    # if include or exclude:
+    #     query = apply_sources(query, include, exclude)
+    #
+    # if filters:
+    #     query = apply_filters(query, filter_values, filters, quotes=quotes)
+    #
+    # if search_term:
+    #     query = apply_search(query, search_term, quotes=quotes)
+    #
+    # if order_by:
+    #     query = apply_order(query, order_by, direction)
+    #
+    # if format == 'csv':
+    #
+    #     cursor = connection.cursor()
+    #     with tempfile.NamedTemporaryFile() as f:
+    #         os.chmod(f.name, 0606)
+    #         cursor.execute("COPY ({}) TO '{}' WITH DELIMITER ',' CSV HEADER".format(query.query, f.name))
+    #
+    #         response = HttpResponse(f.read(), content_type='text/csv')
+    #         response['Content-Disposition'] = 'attachment;filename="variants.csv"'
+    #         return response
+    #
+    # elif format == 'json':
+    #
+    #     count = query.count()
+    #
+    #     if search_term:
+    #         # Number of synonym matches = total matches minus matches on "normal" columns
+    #         synonyms = count - apply_search(query, search_term, search_column='fts_standard').count()
+    #     else:
+    #         synonyms = 0
+    #
+    #     query = select_page(query, page_size, page_num)
+    #
+    #     # call list() now to evaluate the query
+    #     response = JsonResponse({'count': count, 'synonyms': synonyms, 'data': list(query.values(*column))})
+    #     response['Access-Control-Allow-Origin'] = '*'
+    #     return response
 
 
 def apply_sources(query, include, exclude):
