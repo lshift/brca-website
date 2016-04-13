@@ -75,8 +75,11 @@ def apply_sources(query, include, exclude):
 
 
 def apply_filters(query, filterValues, filters, quotes=''):
+    pathogenicity_values = {'Benign': 'Ben', 'Pathogenic': 'Path', 'Unknown': 'Unk'}
     # if there are multiple filters the row must match all the filters
     for column, value in zip(filters, filterValues):
+        if column  == 'Cat_Dis':
+            value = pathogenicity_values[value]
         if column == 'id':
             query = query.filter(**{column: value})
         else:

@@ -60,7 +60,6 @@ var DataTable = React.createClass({
         return (
             this.state.data.length === 0 ||
             this.state.filtersOpen !== nextState.filtersOpen ||
-            this.state.lollipopOpen !== nextState.lollipopOpen ||
             this.state.page !== nextState.page ||
             this.state.pageLength != nextState.pageLength ||
             this.props.search !== nextProps.search ||
@@ -69,7 +68,8 @@ var DataTable = React.createClass({
             !_.isEqual(this.props.columnSelection, nextProps.columnSelection) ||
             !_.isEqual(_.sortBy(this.props.hide), _.sortBy(nextProps.hide)) ||
             !_.isEqual(this.state.filterValues, nextState.filterValues) ||
-            !_.isEqual(this.state.filterColumns, nextState.filterColumns)
+            !_.isEqual(this.state.filterColumns, nextState.filterColumns) ||
+            !_.isEqual(_.map(this.state.data, r => r.id), _.map(nextState.data, r=> r.id))
         );
     },
     componentWillMount: function () {
@@ -113,7 +113,6 @@ var DataTable = React.createClass({
     setFilters: function (obj) {
         var {filterValues} = this.state,
             newFilterValues = merge(filterValues, obj);
-
         this.setStateFetch({
           filterValues: newFilterValues,
           page: 0
@@ -130,7 +129,7 @@ var DataTable = React.createClass({
             searchColumn: _.keys(_.pick(columnSelection, v => v)),
             include: _.keys(_.pick(sourceSelection, v => v == 1)),
             exclude: _.keys(_.pick(sourceSelection, v => v == -1)),
-            filterValues}, hgvs.filters(search, filterValues)));
+            filterValues}, {search:search, filterValues:filterValues}));
     },
     lollipopOpts: function () {
         var {search, filterValues,sourceSelection} = this.state;
@@ -139,7 +138,7 @@ var DataTable = React.createClass({
             include: _.keys(_.pick(sourceSelection, v => v == 1)),
             exclude: _.keys(_.pick(sourceSelection, v => v == -1)),
             filterValues
-        }, hgvs.filters(search, filterValues));
+        }, {search:search, filterValues:filterValues});
     },
     fetch: function (state) {
         var {pageLength, search, page, sortBy,
@@ -152,7 +151,7 @@ var DataTable = React.createClass({
             searchColumn: _.keys(_.pick(columnSelection, v => v)),
             include: _.keys(_.pick(sourceSelection, v => v == 1)),
             exclude: _.keys(_.pick(sourceSelection, v => v == -1)),
-            filterValues}, hgvs.filters(search, filterValues)));
+            filterValues}, {search:search, filterValues:filterValues}));
     },
     // helper function that sets state, fetches new data,
     // and updates url.
